@@ -1,0 +1,22 @@
+{
+  "name": "js-pro",
+  "version": "1.0.0",
+  "description": "media player",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlRazeto/JS-pro.git"
+  },
+  "author": "AlRazeto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlRazeto/JS-pro/issues"
+  },
+  "homepage": "https://github.com/AlRazeto/JS-pro#readme",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}

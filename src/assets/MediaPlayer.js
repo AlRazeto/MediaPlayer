@@ -1,4 +1,13 @@
-function MediaPlayer(config) {this.media = config.el; }
+function MediaPlayer(config) {
+    this.media = config.el; 
+    this.plugin= config.pl || []
+    this.initPlugin()
+}
+MediaPlayer.prototype.initPlugin=function(){
+    this.plugin.forEach(element => {
+        element.run()
+    });
+}
 
 MediaPlayer.prototype.toggle = function()
 {

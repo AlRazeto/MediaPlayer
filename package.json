@@ -4,7 +4,7 @@
   "description": "media player",
   "main": "index.js",
   "scripts": {
-    "start": "live-server src"
+    "start": "parcel **/**/*.html"
   },
   "repository": {
     "type": "git",
@@ -16,7 +16,12 @@
     "url": "https://github.com/AlRazeto/JS-pro/issues"
   },
   "homepage": "https://github.com/AlRazeto/JS-pro#readme",
-  "dependencies": {
-    "live-server": "^1.2.1"
-  }
+  "dependencies": {},
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "typescript": "^4.5.4"
+  },
+  "browserslist": [
+    "last 1 chrome version"
+  ]
 }

@@ -8,7 +8,7 @@ const player = new MediaPlayer({
     el : video,
     pl: [new Autoplay({el:video})]
 })
-btn.onclick = ()=> player.toggle()
+btn.onclick = ()=> {player.toggle() ; console.log("btn")}
 
 if ("serviceWorker" in navigator)
 {navigator.serviceWorker.register("./SW.js")

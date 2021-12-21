@@ -1,4 +1,5 @@
 self.addEventListener("install", event => event.waitUntil( precache() ) )
+
 const Version = "v1"
 
 async function precache(){
@@ -8,12 +9,13 @@ async function precache(){
     './index.html',
     './assets/index.js',
     './assets/MediaPlayer.js',
+    './assets/plugins/autoplay.js',
     './assets/vid.mp4'])
 }
 
 self.addEventListener("fetch", event=>
 {
-    const request = event.request
+    let request = event.request
     if (request.method !== "GET")
     {return}
     event.respondWith( cachedResponse(request))
@@ -23,7 +25,7 @@ async function cachedResponse (request)
 {
     const cache = await caches.open(Version)
     const response = await cache.match(request)
-    return response || fetch(response)
+    return response || fetch(request)
 
 }
 async function cacheUpdate (request)

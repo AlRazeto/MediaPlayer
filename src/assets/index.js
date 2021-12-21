@@ -12,5 +12,5 @@ btn.onclick = ()=> {player.toggle() ; console.log("btn")}
 
 if ("serviceWorker" in navigator)
 {navigator.serviceWorker.register("./SW.js")
-.catch(error=>console.log(error))
+.catch(error=>console.log(error.message))
 }
